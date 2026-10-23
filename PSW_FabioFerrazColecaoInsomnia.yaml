@@ -1,0 +1,388 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: PSW_FabioFerraz
+meta:
+  id: wrk_3a624f9217de4674906b83bd6874b690
+  created: 1781187872183
+  modified: 1781187872183
+  description: ""
+collection:
+  - name: Livros
+    meta:
+      id: fld_e46e8639e0bd44b68b8ca56a63d31e3a
+      created: 1781188771109
+      modified: 1781188788251
+      sortKey: -1781188771109
+      description: ""
+    children:
+      - url: http://localhost:3000/livros
+        name: Listar todos os livros
+        meta:
+          id: req_2d8ff243d4c44f3396caa366fd1f5d5f
+          created: 1781188678728
+          modified: 1781189796880
+          isPrivate: false
+          description: ""
+          sortKey: -1781188778637
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/livros/1
+        name: Obter um livro pelo ID
+        meta:
+          id: req_159a588ecd354235aa4f2f13ede3e802
+          created: 1781188793576
+          modified: 1781189797745
+          isPrivate: false
+          description: ""
+          sortKey: -1781188778737
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/livros
+        name: Adicionar um novo livro
+        meta:
+          id: req_a12b810414b64a49b3e81b9267a2fb91
+          created: 1781188828559
+          modified: 1781189011547
+          isPrivate: false
+          description: ""
+          sortKey: -1781188778837
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"titulo": "Livro 4", 
+            	"descricao": "Descrição 4", 
+            	"dataPublicacao": "2023-06-09", 
+            	"quantidade": "20", 
+            	"preco": "39.99", 
+            	"editora_id": "1"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/livros/4
+        name: Atualizar um livro
+        meta:
+          id: req_c242066413d349e2bdc03456c5c03fdc
+          created: 1781189016208
+          modified: 1781189067172
+          isPrivate: false
+          description: ""
+          sortKey: -1781188778937
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"titulo": "Livro 4", 
+            	"descricao": "Descrição 10", 
+            	"dataPublicacao": "2023-06-09", 
+            	"quantidade": "15", 
+            	"preco": "39.99", 
+            	"editora_id": "1"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/livros/4
+        name: Eliminar um livro
+        meta:
+          id: req_a9f0c0bca8bb4b97a2b8957871a2257d
+          created: 1781189070092
+          modified: 1781189113122
+          isPrivate: false
+          description: ""
+          sortKey: -1781188779037
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Editoras
+    meta:
+      id: fld_0d11e5fb5a0c436f955d6a2bec5727a2
+      created: 1781189122392
+      modified: 1781189122392
+      sortKey: -1780756630249
+      description: ""
+    children:
+      - url: http://localhost:3000/editoras/3
+        name: Atualizar editora
+        meta:
+          id: req_10a95d8344b343fc92c8347131b9eb89
+          created: 1781189122392
+          modified: 1781190004391
+          isPrivate: false
+          description: ""
+          sortKey: -1781188778937
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Lisboa Editora",
+            	"estado": "ativo"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/editoras
+        name: Criar nova editora
+        meta:
+          id: req_3833ae09225b46b3882720470fe73c66
+          created: 1781189122392
+          modified: 1781189905834
+          isPrivate: false
+          description: ""
+          sortKey: -1781188778837
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Porto Editora"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/editoras/1
+        name: Obter editora por ID
+        meta:
+          id: req_488c2f9849044d35ac7896cba42153a3
+          created: 1781189122392
+          modified: 1781189885736
+          isPrivate: false
+          description: ""
+          sortKey: -1781188778737
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/editoras/3
+        name: Eliminar editora
+        meta:
+          id: req_cd51f508cc124123a7445ce2df5b937f
+          created: 1781189122392
+          modified: 1781190253014
+          isPrivate: false
+          description: ""
+          sortKey: -1781188779037
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/editoras
+        name: Listar todas as editoras
+        meta:
+          id: req_efc4d03badaa4943b8b11f564caca6d6
+          created: 1781189122392
+          modified: 1781189880349
+          isPrivate: false
+          description: ""
+          sortKey: -1781188778637
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Funcionalidades Avançadas
+    meta:
+      id: fld_a2ce835bf09241e29cd7ff36b56aeab1
+      created: 1781189237092
+      modified: 1781189237092
+      sortKey: -1781189237092
+      description: ""
+    children:
+      - url: http://localhost:3000/editoras/2/livros
+        name: Listar todos os livros de uma determinada editora
+        meta:
+          id: req_c0103d7c061e4006bd38f8b676984892
+          created: 1781189258977
+          modified: 1781190096710
+          isPrivate: false
+          description: ""
+          sortKey: -1781189328621
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/livros/estado/ativo
+        name: Listar todos os livros associados a editoras com o estado indicado
+        meta:
+          id: req_5a4880a179ed4859b467a51e8e9accf9
+          created: 1781189284840
+          modified: 1781189397228
+          isPrivate: false
+          description: ""
+          sortKey: -1781189328721
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/editoras/com-livros
+        name: Listar editoras com o numero de livros associados a cada uma
+        meta:
+          id: req_aef195742caf450484f2e9c96a19de64
+          created: 1781189307356
+          modified: 1781189405095
+          isPrivate: false
+          description: ""
+          sortKey: -1781189328821
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_877d814e3c36d60cb553a2efea37ab128d61ee1d
+    created: 1781187872185
+    modified: 1781187872185
+environments:
+  name: Base Environment
+  meta:
+    id: env_877d814e3c36d60cb553a2efea37ab128d61ee1d
+    created: 1781187872184
+    modified: 1781187872184
+    isPrivate: false
